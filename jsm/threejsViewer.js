@@ -134,7 +134,7 @@ class threejsViewer {
             else {
                 // partial parameters update
                 uniforms = mesh.material.uniforms
-                // uniforms['u_cmdata'].value = new THREE.DataTexture(colormap, 256, 1)
+                uniforms['u_cmdata'].value = new THREE.DataTexture(colormap, 256, 1)
                 // or
                 // uniforms['u_cmdata'].value.image = { data: colormap }
                 // uniforms['u_cmdata'].value.needUpdata = true
