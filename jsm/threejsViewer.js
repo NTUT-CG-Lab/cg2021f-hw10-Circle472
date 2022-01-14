@@ -94,7 +94,7 @@ class threejsViewer {
             let dims = volume.dims
             let uniforms = null
             let mesh = this.scene.getObjectByName(name)
-            let scale = 1 / Math.max(dims[0], dims[1], dims[2])
+            let scale = 1 / Math.max(...dims) // dims[0], dims[1], dims[2]
 
             if (mesh == null) {
                 //first time initial
@@ -106,6 +106,7 @@ class threejsViewer {
 
                 texture.format = THREE.LuminanceFormat
                 texture.type = THREE.UnsignedByteType
+                texture.minFilter = texture.magFilter = THREE.LinearFilter; // 變清晰
                 // texture.format = THREE.LuminanceFormat
                 // texture.type = //...
 
