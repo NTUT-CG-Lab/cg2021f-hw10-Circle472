@@ -110,7 +110,7 @@ class threejsViewer {
                 // texture.format = THREE.LuminanceFormat
                 // texture.type = //...
 
-                let cmtexture = new THREE.DataTexture(colormap, 256, 1)
+                let cmtexture = new THREE.DataTexture(colormap, 256, 1, THREE.RGBAFormat)
 
                 let material = new THREE.ShaderMaterial({
                     uniforms: {
